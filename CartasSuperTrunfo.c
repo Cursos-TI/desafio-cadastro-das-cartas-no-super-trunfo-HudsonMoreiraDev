@@ -9,23 +9,25 @@
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    int n = 2; //numero de strings
-    char estado[8][3];
-    char cidade[8][20];
-    int numerocidade[32][4];
-    char codigocarta[32][4];
-    int populacao[32];
-    float area[32];
-    float pib[32];
-    int pontosturisticos[32];
-    float densidade[32];
-    float percapita[32];
+
+    //foram usadas variavel[2] em cada variável para representar a quantidade que cada variável vai receber de acordo com a quantidade de cartas.
+
+    char estado[2][3]; //variável que representa a letra de A a H, do Estado do país
+    char cidade[2][20]; // variável que representa o nome da cidade
+    int numerocidade[2][4]; //variável que representa o numero de 01 a 04 da cidade
+    char codigocarta[2][4]; // variável que vai representar o codigo da carta
+    int populacao[2]; //variável que representa o tamanho populacional
+    float area[2]; // variável que representa a area da cidade
+    float pib[2]; // variável que representa o pib da cidade
+    int pontosturisticos[2]; // variável que representa a quantidade de pontos turísticos
+    float densidade[2]; // variável que representa a densidade da cidade.
+    float percapita[2]; // variável que representa o pib per capita da cidade
 
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
 
-    printf("SuperTrunfo: Países \n");
-    printf("Vamos cadastrar as cartas ! \n");
+    printf("SuperTrunfo: Países \n"); // Título do jogo Super Trunfo
+    printf("Vamos cadastrar as cartas ! \n"); // Subtítulo para anunciar o cadastro das cartas
 
     // Cadastro das Cartas:
     printf("Digite uma letra de A a H para representar o Estado da carta: " ,estado[0]);
@@ -34,7 +36,7 @@ int main() {
     printf("Digite um numero de 01 a 04 para representar o numero da cidade: " ,numerocidade[0]);
     scanf("%s" ,&numerocidade[0]);
 
-    sprintf(codigocarta[0], "%s%s" ,estado[0] ,numerocidade[0]);
+    sprintf(codigocarta[0], "%s%s" ,estado[0] ,numerocidade[0]); //foi utilizado esse comando para CONCATENAR, ou seja, juntar, a letra do estado com o numero da cidade, para representar o codigo da carta
 
     printf("Digite o nome da cidade para esta carta: " ,cidade[0]);
     scanf("%s" ,&cidade[0]);
