@@ -10,6 +10,8 @@ int main(void)
     float pib1 , pib2; // representa o produto interno bruto da cidade
     int pontosturisticos1, pontosturisticos2; // representa a quantidade de pontos turisticos da cidade
     int populacao1, populacao2; // representa o tamanho da população da cidade
+    float densidade1 , densidade2;
+    float percapita1 , percapita2;
 
     printf("Supertrunfo: Países \n"); // anuncio do jogo
     printf("Vamos cadastrar as cartas! \n"); //comentario para informar que o usuário irá cadastrar as cartas
@@ -69,6 +71,16 @@ int main(void)
     printf("Digite a quantidade de pontos turísticos da cidade: " ,pontosturisticos2);
     scanf("%d" ,&pontosturisticos2);
 
+    //Cálculos matemáticos
+
+    densidade1 = populacao1 / area1;
+    densidade2 = populacao2 / area2;
+
+    percapita1 = pib1 / populacao1;
+    percapita2 = pib2 / populacao2;
+
+    //Encerramento dos cálculos matemáticos
+
     //Exibição dos dados das cartas:
 
     printf("\n"); //adicionado uma quebra de linha 
@@ -83,6 +95,8 @@ int main(void)
     printf("Área: %.2f km²\n" ,area1);
     printf("PIB: %.2f bilhões de reais \n" ,pib1);
     printf("Número de Pontos Turísticos: %d \n" ,pontosturisticos1);
+    printf("Densidade Populacional: %.2f hab/km² \n" ,densidade1);
+    printf("PIB Per Capita: %.2f reais \n" ,percapita1);
 
     printf("\n"); //adicionado uma quebra de linha
 
@@ -94,6 +108,8 @@ int main(void)
     printf("Área: %.2f km²\n" ,area2);
     printf("PIB: %.2f bilhões de reais \n" ,pib2);
     printf("Número de Pontos Turísticos: %d \n" ,pontosturisticos2);
+    printf("Densidade Populacional: %.2f hab/km² \n" ,densidade2);
+    printf("PIB Per Capita: %.2f reais" ,percapita2);
 
     //encerra-se a exibição dos dados
     //encerrado o desafio novato 
