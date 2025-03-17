@@ -9,7 +9,7 @@ int main(void)
     float area1 , area2; //representa a area em (km²) da cidade
     float pib1 , pib2; // representa o produto interno bruto da cidade
     int pontosturisticos1, pontosturisticos2; // representa a quantidade de pontos turisticos da cidade
-    int populacao1, populacao2; // representa o tamanho da população da cidade
+    unsigned long int populacao1, populacao2; // representa o tamanho da população da cidade
     float densidade1 , densidade2;
     float percapita1 , percapita2;
     float superpoder1 , superpoder2 ;
@@ -33,7 +33,7 @@ int main(void)
     scanf("%s" ,&cidade1);
 
     printf("Digite o tamanho da população: " ,populacao1);
-    scanf("%d" ,&populacao1);
+    scanf("%lu" ,&populacao1);
 
     printf("Digite a Área(em km²) da cidade: " ,area1);
     scanf("%f" ,&area1);
@@ -61,7 +61,7 @@ int main(void)
     scanf("%s" ,&cidade2);
 
     printf("Digite o tamanho da população: " ,populacao2);
-    scanf("%d" ,&populacao2);
+    scanf("%lu" ,&populacao2);
 
     printf("Digite a Área(em km²) da cidade: " ,area2);
     scanf("%f" ,&area2);
@@ -99,7 +99,7 @@ int main(void)
     printf("Estado: %s \n" ,estado1);
     printf("Código da carta: %s \n" ,codigocarta1);
     printf("Nome da Cidade: %s \n" ,cidade1);
-    printf("População: %d \n" ,populacao1);
+    printf("População: %lu \n" ,populacao1);
     printf("Área: %.2f km²\n" ,area1);
     printf("PIB: %.2f bilhões de reais \n" ,pib1);
     printf("Número de Pontos Turísticos: %d \n" ,pontosturisticos1);
@@ -114,7 +114,7 @@ int main(void)
     printf("Estado: %s \n" ,estado2);
     printf("Código da carta: %s \n" ,codigocarta2);
     printf("Nome da Cidade: %s \n" ,cidade2);
-    printf("População: %d \n" ,populacao2);
+    printf("População: %lu \n" ,populacao2);
     printf("Área: %.2f km²\n" ,area2);
     printf("PIB: %.2f bilhões de reais \n" ,pib2);
     printf("Número de Pontos Turísticos: %d \n" ,pontosturisticos2);
