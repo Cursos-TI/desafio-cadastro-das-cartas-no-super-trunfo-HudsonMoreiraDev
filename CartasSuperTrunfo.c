@@ -138,21 +138,127 @@ int main(void)
     float resultado_superpoder = superpoder1 > superpoder2 ;
 
     //Saída de dados das comparações
-    printf("Vamos agora saber quem ganhou! \n");
-    printf("Comparação das cartas (Atributo: População): \n\n");
+    printf("### Menu de Comparação das Cartas ### \n\n"); //anuncio da comparação das cartas
+    
+    //Inicio das opções para o usuário escolher
+    printf("1 - População \n"); 
+    printf("2 - Área \n");
+    printf("3 - PIB \n");
+    printf("4 - Números de pontos turísticos \n");
+    printf("5 - Densidade populacional \n\n ");
+    //final das opções para o usuário escolher
 
-    printf("Carta 1 - %s : %lu \n" ,cidade1 ,populacao1);
-    printf("Carta 2 - %s : %lu \n\n" ,cidade2 ,populacao2);
+    int opcao; //responsável para armazenar a opção da escolha do usuário para escolher o atributo a ser comparado.
 
-    if(resultado_populacao = populacao1 > populacao2){
-        printf("Carta 1 (%s) venceu !\n\n" ,cidade1);
-    }
-    else{
-        printf("Carta 2 (%s) venceu! \n\n" ,cidade2);
+    printf("Digite alguma das opções acima para comparar o atributo: "); 
+    scanf("%d" ,&opcao); //aqui irá registrar a opção que o usuário irá escolher.
+
+    printf("\n"); // quebra de linha.
+
+    switch (opcao) // aqui de acordo com a opção do usuário, de 1 a 5, irá determinar em qual case vai ser utilizado.
+    { //em cada caso será usado os mesmos codigos, mudando apenas as variáveis de cada CASE.
+    case 1:
+        printf("Vamos saber quem ganhou ! \n"); // anuncio para saber quem ganhou.
+        printf("%s x %s \n" ,cidade1 ,cidade2); // mostra o nomes das cidades.
+        printf("O atributo escolhido foi População. \n"); //de acordo com a opção escolhida, a CASE diz qual o atributo foi escolhido.
+        printf("Carta 1 (%s): %lu \n" ,cidade1 ,populacao1); // mostra o nome da carta e o valor do atributo da CARTA 1.
+        printf("Carta 2 (%s): %lu \n" ,cidade2 ,populacao2); // mostra o nome da carta e o valor do atributo da CARTA 2.
+        
+        if (populacao1 == populacao2) // se ambas as variáveis estiverem valores iguais, será EMPATE.
+        {
+            printf("Empate !");
+        }else if (populacao1 > populacao2) // se a variável da CARTA 1 for maior que a da CARTA 2, CARTA 1 vence.
+        {
+            printf("Carta 1 venceu !");
+        }else // se não couber a nenhum dos casos acima, a CARTA 2 vence.
+        {
+            printf("Carta 2 venceu !");
+        }
+        break;
+    
+    case 2:
+        printf("Vamos saber quem ganhou ! \n");
+        printf("%s x %s \n" ,cidade1 ,cidade2);
+        printf("O atributo escolhido foi Área. \n");
+        printf("Carta 1 (%s): %.2f km² \n" ,cidade1 ,area1);
+        printf("Carta 2 (%s): %.2f km² \n" ,cidade2 ,area2);
+        
+        if (area1 == area2)
+        {
+            printf("Empate !");
+        }else if (area1 > area2)
+        {
+            printf("Carta 1 venceu !");
+        }else
+        {
+            printf("Carta 2 venceu !");
+        }
+        break;
+
+        case 3:
+        printf("Vamos saber quem ganhou ! \n");
+        printf("%s x %s \n" ,cidade1 ,cidade2);
+        printf("O atributo escolhido foi PIB. \n");
+        printf("Carta 1 (%s): %.2f bilhões de reais \n" ,cidade1 ,pib1);
+        printf("Carta 2 (%s): %.2f bilhões de reais \n" ,cidade2 ,pib2);
+        
+        if (pib1 == pib2)
+        {
+            printf("Empate !");
+        }else if (pib1 > pib2)
+        {
+            printf("Carta 1 venceu !");
+        }else
+        {
+            printf("Carta 2 venceu !");
+        }
+        break;
+
+        case 4:
+        printf("Vamos saber quem ganhou ! \n");
+        printf("%s x %s \n" ,cidade1 ,cidade2);
+        printf("O atributo escolhido foi Números de pontos turísticos. \n");
+        printf("Carta 1 (%s): %d \n" ,cidade1 ,pontosturisticos1);
+        printf("Carta 2 (%s): %d \n" ,cidade2 ,pontosturisticos2);
+        
+        if (pontosturisticos1 == pontosturisticos2)
+        {
+            printf("Empate !");
+        }else if (pontosturisticos1 > pontosturisticos2)
+        {
+            printf("Carta 1 venceu !");
+        }else
+        {
+            printf("Carta 2 venceu !");
+        }
+        break;
+
+        case 5:
+        printf("Vamos saber quem ganhou ! \n");
+        printf("%s x %s \n" ,cidade1 ,cidade2);
+        printf("O atributo escolhido foi Densidade Populacional. \n");
+        printf("Carta 1 (%s): %.2f hab/km² \n" ,cidade1 ,densidade1);
+        printf("Carta 2 (%s): %.2f hab/km² \n" ,cidade2 ,densidade2);
+        
+        if (densidade1 == densidade2)
+        {
+            printf("Empate !");
+        }else if (densidade1 < densidade2)
+        {
+            printf("Carta 1 venceu !");
+        }else
+        {
+            printf("Carta 2 venceu !");
+        }
+        break;
+    
+    default: //caso o usuário um número que não corresponda as opções, irá informar que a Opção é inválida.
+        printf("Opção inválida !");
+        break;
     }
       
     return 0;
 
     //Encerra-se o código
-    //Desafio Mestre Concluído
+    
 }
